@@ -1,1 +1,66 @@
 /* CSS stillerinizi buraya girin */
+* {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  width: 100%;
+}
+
+.header-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1%;
+}
+
+.isim {
+  font-size: 30px;
+}
+
+.header {
+  margin-right: 10px;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: right;
+}
+
+.header a {
+  background-color: alice;
+  padding: 20px;
+  border-radius: 25%;
+  border-style: solid;
+}
+
+.mainicerik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 120px;
+  width: auto;
+  height: 300px;
+  background-color: gray;
+  background-image: url("https://picsum.photos/2400/600");
+  border-style: solid;
+}
+
+.mainicerik p {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  border-style: dashed;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+.mainicerik a {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 25%;
+  border-style: solid;
+}
