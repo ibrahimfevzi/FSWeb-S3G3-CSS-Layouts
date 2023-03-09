@@ -1,157 +1,91 @@
 /* CSS stillerinizi buraya girin */
 * {
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  background-color: bisque;
+  font-size: 16px;
+  /*border: 1px solid limegreen;
+  background-color: rgba(116, 116, 116, 0.1);*/
 }
 
-.container {
+body {
+  margin: 0;
+}
+
+.containerClamp {
   width: 900px;
-}
-
-.header-all {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 1%;
-}
-
-.isim {
-  font-size: 30px;
+  margin: 0 auto;
 }
 
 .header {
-  margin-right: 10px;
-  list-style-type: none;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: right;
-}
-
-.header a {
-  background-color: aliceblue;
-  padding: 20px;
-  border-radius: 25%;
-  border-style: solid;
-  text-decoration: none;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  margin: 60px;
-  flex-wrap: wrap;
-}
-
-.mainicerik {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 600px;
-  background-color: gray;
-  background-image: url("https://picsum.photos/2400/600");
-  border-style: solid;
 }
 
-.mainicerik p {
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-  border-style: dashed;
-  margin-bottom: 50px;
-  padding: 20px;
+.header h1 {
+  margin-left: 40px;
 }
-.mainicerik a {
-  background-color: aliceblue;
-  padding: 20px;
-  border-radius: 25%;
-  border-style: solid;
+
+.menu ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  text-transform: uppercase;
+}
+
+.menu ul li.menu--active {
+  background-color: rgb(41, 177, 31);
+}
+
+.menu ul li:hover {
+  background-color: darkblue;
+}
+
+.menu ul li a {
   text-decoration: none;
 }
-
-.proje {
+.about {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 130px;
   flex-wrap: wrap;
+  gap: 30px;
+  margin: 20px auto;
 }
-.proje a1,
-a2,
-a3 {
+.about__content {
+  /* display: inline-block; */
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.projects {
+  margin: 20px auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 400px;
-  height: 400px;
-  color: white;
-  background-color: gray;
-  background-image: url("https://picsum.photos/2400/600");
-  border-style: solid;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.projects__item {
+  /* display: inline-block; */
   margin-bottom: 20px;
 }
 
-.yazi1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+.projects__item p {
+  text-align: center;
 }
 
-.proje a4,
-a5,
-a6 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 400px;
-  height: 400px;
-  color: white;
-  background-color: gray;
-  background-image: url("https://picsum.photos/2400/600");
-  border-style: solid;
-  margin-bottom: 20px;
+.project__image {
+  background-color: tomato;
+  width: 200px;
 }
-
-.yazi2 {
+.footer {
+  background-color: rgb(41, 177, 31);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-footer {
-  display: flex;
-  width: 100%;
-  height: 200px;
-  background-color: darkgrey;
-  border-top: 1px dashed white;
-  align-items: center;
   justify-content: center;
-  text-decoration: none;
+  padding: 40px;
 }
 
-.footer-content {
-  color: black;
-  background-color: aliceblue;
-  border-style: solid;
-  padding: 20px;
-  border-radius: 25%;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-content a {
-  text-decoration: none;
-  background-color: aliceblue;
+.footer__cta {
+  display: inline-block;
+  text-align: center;
 }
