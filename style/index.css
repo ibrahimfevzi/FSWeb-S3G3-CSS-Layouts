@@ -1,34 +1,47 @@
 /* CSS stillerinizi buraya girin */
 * {
-  font-family: "Nunito", sans-serif;
-  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
   /*border: 1px solid limegreen;
   background-color: rgba(116, 116, 116, 0.1);*/
 }
 
 body {
   margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Tilt Prism", cursive;
+}
+
+button {
+  padding: 10px 30px;
 }
 
 .containerClamp {
-  width: 900px;
+  /* width: 900px; Media query içine taşındı. */
   margin: 0 auto;
 }
 
 .header {
   display: flex;
   flex-direction: column;
+  background-color: antiquewhite;
 }
 
-.header h1 {
-  margin-left: 40px;
+.menu ul {
+  padding-inline-start: 0;
 }
 
 .menu ul li {
   display: inline-block;
+  border-radius: 5px;
   padding: 10px 20px;
   background-color: orange;
   text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .menu ul li.menu--active {
@@ -36,11 +49,12 @@ body {
 }
 
 .menu ul li:hover {
-  background-color: darkblue;
+  background-color: rgb(18, 151, 223);
 }
 
 .menu ul li a {
   text-decoration: none;
+  color: wheat;
 }
 .about {
   display: flex;
@@ -48,6 +62,11 @@ body {
   gap: 30px;
   margin: 20px auto;
 }
+
+.about__image img {
+  border-radius: 25px;
+}
+
 .about__content {
   /* display: inline-block; */
   margin-top: auto;
@@ -61,8 +80,7 @@ body {
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 40px;
+  justify-content: space-evenly;
 }
 
 .projects__item {
@@ -77,6 +95,7 @@ body {
 .project__image {
   background-color: tomato;
   width: 200px;
+  border-radius: 20px;
 }
 .footer {
   background-color: rgb(41, 177, 31);
@@ -88,4 +107,80 @@ body {
 .footer__cta {
   display: inline-block;
   text-align: center;
+}
+
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+  /* body {
+    background-color: rgba(100, 149, 237, 0.9);
+  } */
+
+  .header h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .menu {
+    text-align: center;
+  }
+  .menu ul li {
+    display: block;
+  }
+
+  .about {
+    justify-content: center;
+  }
+  .about__content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .about__content p {
+    text-align: left;
+  }
+  .projects__item {
+    /* display: inline-block; */
+    width: 40%;
+  }
+  .project__image {
+    background-color: tomato;
+    width: 100%;
+  }
+  .projects {
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+}
+
+/* Medium devices (landscape phones and portraid tablets, 900px and up) */
+/* @media only screen and (min-width: 500px) { */
+@media only screen and (min-width: 500px) and (max-width: 900px) {
+  /* body {
+    background-color: rgba(255, 165, 0, 0.9);
+  } */
+  .projects {
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+
+  .about {
+    flex-wrap: nowrap;
+  }
+
+  .about__image {
+  }
+
+  .about__content {
+    min-width: initial;
+    max-width: initial;
+  }
+}
+
+/* Medium devices (laptops/desktops, 900px and up) */
+@media only screen and (min-width: 900px) {
+  /* body {
+    background-color: rgba(255, 99, 71, 0.9);
+  } */
+  .containerClamp {
+    width: 900px;
+  }
 }
